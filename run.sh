@@ -4,7 +4,7 @@
 set -e
 
 # Install package.json dependencies
-npm
+npm install
 
 # Run project
 npm run build
