@@ -1,7 +1,8 @@
 import { Engine, Scene } from "inks2d";
+import { SplashScreen } from "inks2d/extras";
 import { Rectangle } from "inks2d/geom";
 
-const g = new Engine(512, 512);
+const g = new Engine(990, 540);
 
 class Main extends Scene {
   constructor() {
@@ -19,6 +20,15 @@ class Main extends Scene {
   }
 }
 
-g.scene = new Main();
+g.scene = new SplashScreen(
+  ["./logo.png"],
+  new Rectangle(),
+  () => {
+    g.scene = new Main();
+  },
+  true,
+  g
+);
+
 g.centerscreen = true;
 g.start();
