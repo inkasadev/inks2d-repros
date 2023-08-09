@@ -12,6 +12,6 @@
     "vite": "^4.3.0"
   },
   "dependencies": {
-    "inks2d": "latest"
+    "inks2d": "0.1.2"
   }
 }
